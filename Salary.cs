@@ -1,0 +1,31 @@
+public class Salary
+{
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("Enter your number of working days: ");
+        int days = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter your years of experience: ");
+        int exp = Convert.ToInt32(Console.ReadLine());
+        float total_salary = 50000;
+        float salary_perday = total_salary/days;
+        float final_salary;
+        float bonus = 0;
+        if (exp >= 5)
+        {
+            bonus = total_salary * 0.10f;
+            
+        
+        }
+        else if(exp == 3 || exp == 4)
+        {
+            bonus = total_salary * 0.05f; 
+
+        }
+        else if(exp==1)
+        {
+           bonus =  total_salary * 0.01f;
+        }
+        final_salary = (salary_perday * days)+ bonus; 
+        Console.WriteLine("Your salary is "+ final_salary);
+    }
+}
